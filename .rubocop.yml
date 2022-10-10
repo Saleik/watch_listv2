@@ -1,6 +1,10 @@
+inherit_from:
+  - '.rubocop-performance.yml'
+  - '.rubocop-rails.yml'
+
 require:
-  - rubocop-performance
-  - rubocop-rails
+  - rubocop-performance'
+  - rubocop-rails'
 
 AllCops:
   TargetRubyVersion: 3.1

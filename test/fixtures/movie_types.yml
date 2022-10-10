@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_list: one
+  movies: one
+
+two:
+  type_list: two
+  movies: two
