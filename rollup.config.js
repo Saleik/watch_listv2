@@ -6,7 +6,7 @@ export default {
     file: "app/assets/builds/javascript/application.js",
     format: "es",
     inlineDynamicImports: true,
-    sourcemap: true
+    sourcemap: true,
   },
   plugins: [
     resolve()
