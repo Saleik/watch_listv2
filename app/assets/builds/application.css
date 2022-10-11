@@ -10809,7 +10809,7 @@ legend ~ div.form-check:first-of-type {
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: violet;
+  background: white;
 }
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
