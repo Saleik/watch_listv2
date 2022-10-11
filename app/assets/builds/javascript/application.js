@@ -1,3 +1,4 @@
+import '@fortawesome/fontawesome-free';
 import 'controllers';
 
 var top = 'top';

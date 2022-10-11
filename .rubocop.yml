@@ -13,24 +13,23 @@ AllCops:
   TargetRubyVersion: 3.0
   TargetRailsVersion: 7.0
   NewCops: enable
-  AllCops:
-    Include:
-      - '**/*.rb'
-      - '**/*.gemfile'
-      - '**/*.gemspec'
-      - '**/*.rake'
-      - '**/*.ru'
-      - '**/Gemfile'
+  Include:
+    - '**/*.rb'
+    - '**/*.gemfile'
+    - '**/*.gemspec'
+    - '**/*.rake'
+    - '**/*.ru'
+    - '**/Gemfile'
 
-    Exclude:
-      - 'bin/**/*'
-      - 'db/**/*'
-      - 'config/**/*'
-      - 'node_modules/**/*'
-      - 'script/**/*'
-      - 'support/**/*'
-      - 'tmp/**/*'
-      - 'test/**/*'
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'node_modules/**/*'
+    - 'script/**/*'
+    - 'support/**/*'
+    - 'tmp/**/*'
+    - 'test/**/*'
 
 Bundler/OrderedGems:
   Enabled: false
