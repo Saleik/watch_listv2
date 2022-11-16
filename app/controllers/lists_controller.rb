@@ -6,6 +6,17 @@ class ListsController < ApplicationController
   end
 
   def new
-    @lists = List.new
+    @list = List.new
+    @list.bookmarks.build
+  end
+
+  def create
+    raise
+  end
+
+  private
+
+  def list_params
+    params.require(:list).permit(:name, bookmarks_attributes: [:comment, :movie])
   end
 end
