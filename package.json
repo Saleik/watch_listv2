@@ -12,7 +12,7 @@
   },
   "scripts": {
     "watch:sass": "sass -w ./app/assets/stylesheets/application.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules",
-    "build:css": "sass ./app/assets/stylesheets/application.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules",
-    "build": "yarn watch:sass & rollup -c rollup.config.js"
+    "build:sass": "sass ./app/assets/stylesheets/application.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules",
+    "build": "yarn build:sass & rollup -c rollup.config.js"
   }
 }

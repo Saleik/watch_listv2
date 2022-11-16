@@ -1,3 +1,5 @@
+//Font
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap');
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
@@ -9,3 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+h1,h2,h3,h4{
+  font-family: 'Lobster', cursive;
+}
+
+p{
+  font-family: 'Roboto', sans-serif;
+}
