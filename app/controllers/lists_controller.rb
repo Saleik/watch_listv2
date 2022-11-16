@@ -4,4 +4,8 @@ class ListsController < ApplicationController
   def index
     @lists = List.where(user: current_user)
   end
+
+  def new
+    @lists = List.new
+  end
 end
