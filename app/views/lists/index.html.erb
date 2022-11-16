@@ -1,0 +1,27 @@
+<%= render 'shared/banner', banner:{
+  title: current_user.nickname,
+  content:'My lists',
+  img_url:'https://res.cloudinary.com/saleik/image/upload/v1665493747/watchList/banner_home_rqxoih.jpg'
+} %>
+
+<div class='container mt-5'>
+  <div class='row'>
+    <div class='text-end'>
+      <%= link_to'#', class:'btn btn-danger' do %>
+          <i class="fa-solid fa-plus"></i> New List
+        <% end %>
+    </div>
+
+  </div>
+  <div class='row py-5'>
+    <div class='col-md-8 offset-md-2'>
+      <% if @lists.size.positive? %>
+        <%= @lists.each do |list|%>
+          <%= render 'card', list:list %>
+        <% end %>
+      <% else %>
+        <h3 class='text-center'>You have not created a list yet</h3>
+      <% end %>
+    </div>
+  </div>
+</div>

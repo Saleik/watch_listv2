@@ -1,7 +1,7 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%=asset_url('https://res.cloudinary.com/saleik/image/upload/v1665493747/watchList/banner_home_rqxoih.jpg')%>)">>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%=asset_url(banner[:img_url])%>)">>
   <div class="container">
     <div class="col-md-6 offset-md-3">
-      <h1><%= banner[:title]%></h1>
+      <h1>Welcome <span class="text-danger"><%= banner[:title]%></span></h1>
       <p><%= banner[:content] %></p>
     </div>
   </div>
