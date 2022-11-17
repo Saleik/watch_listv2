@@ -4,7 +4,7 @@ test:
 
 cloudinary:
   service: Cloudinary
-  folder: <%= Rails.env %>
+  folder: watchList
 
 local:
   service: Disk
