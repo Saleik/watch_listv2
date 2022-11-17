@@ -1,5 +1,6 @@
 {
   "name": "watchlistv2",
+  "type":"module",
   "license": "MIT",
   "dependencies": {
     "@hotwired/stimulus": "^3.1.0",
@@ -12,7 +13,7 @@
   },
   "scripts": {
     "watch:sass": "sass -w ./app/assets/stylesheets/application.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules",
-    "build:sass": "sass ./app/assets/stylesheets/application.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules",
-    "build": "yarn build:sass & rollup -c rollup.config.js"
+    "build:css": "sass ./app/assets/stylesheets/application.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules",
+    "build": "yarn build:css & rollup -c rollup.config.js"
   }
 }

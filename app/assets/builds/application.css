@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap"); /*!
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/tom-select/2.2.2/css/tom-select.min.css");
+/*!
  * Bootstrap  v5.2.2 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
