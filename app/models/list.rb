@@ -2,7 +2,9 @@ class List < ApplicationRecord
   belongs_to :user
   has_many :movies, through: :bookmarks
   has_many :bookmarks, dependent: :destroy
+  has_one_attached :image
   accepts_nested_attributes_for :bookmarks, reject_if: ->(attributes) { attributes["comment"].blank? }, allow_destroy: true
 
   validates :name, presence: true, uniqueness: { scope: :user_id }
+  validates :resume, presence: true, length: { maximum: 150 }
 end
