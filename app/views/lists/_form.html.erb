@@ -14,7 +14,7 @@
     <%= simple_fields_for :bookmarks do |b| %>
       <div class="form-inputs">
         <%= b.input :comment %>
-        <%= b.input :movie, collection: Movie.all, input_HTML:{ multiple:true, data:{ controller: "tom-select"}}%>
+        <%= b.input :movie, collection: Movie.all, input_html:{ multiple:true, data:{ controller: "tom-select"}}%>
       </div>
     <% end %>
 
