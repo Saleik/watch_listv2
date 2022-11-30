@@ -2,7 +2,7 @@
   <%= image_tag asset_url("https://image.tmdb.org/t/p/w500/#{list.movie.poster_url}"), class:'card-img-top' alt:"#{list.movie.title}"%>
   <div class='card-body'>
     <h5 class='card-title'><%= list.name %></h5>
-    <p class='card-text'><%= list.bookmark.comment %></p>
+    <p class='card-text'><%= list.movie.overview %></p>
     <%= link_to 'See More', '#', class:'btn btn-danger' %>
   </div>
 </div>
