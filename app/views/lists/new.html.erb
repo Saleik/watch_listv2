@@ -1,13 +1,9 @@
-<%= render 'shared/banner', banner:{
-  title: current_user.nickname,
-  content:'My lists',
-  img_url:'https://res.cloudinary.com/saleik/image/upload/v1665493747/watchList/banner_home_rqxoih.jpg'
-} %>
-
 <div class="container my-5">
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      <%= render 'form', list:@list %>
+  <%= turbo_frame_tag "new_list_frame" do %>
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <%= render 'form', list:@list %>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>
