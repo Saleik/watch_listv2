@@ -1,10 +1,11 @@
 require 'open-uri'
 require 'json'
 
-Bookmark.destroy_all
-MovieType.destroy_all
-Type.destroy_all
-Movie.destroy_all
+Bookmark.delete_all
+MovieType.delete_all
+List.delete_all
+Type.delete_all
+Movie.delete_all
 
 URL = 'https://tmdb.lewagon.com/movie/top_rated'.freeze
 

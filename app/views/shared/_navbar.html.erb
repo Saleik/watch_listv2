@@ -1,8 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "https://res.cloudinary.com/saleik/image/upload/v1668593340/watchList/noun-logo_kdmgfp.svg" %>
-    <%end %>
+      <%= cl_image_tag("https://res.cloudinary.com/saleik/image/upload/v1668593340/watchList/noun-logo_kdmgfp.svg") %>
+    <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -19,7 +19,7 @@
           </li>
           <li class="nav-item dropdown">
             <%# TODO:OPTIONAL FEATURE: Upload an avatar %>
-            <%= image_tag "https://res.cloudinary.com/saleik/image/upload/v1668593030/watchList/noun-user_x8wxtr.svg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= cl_image_tag("https://res.cloudinary.com/saleik/image/upload/v1668593030/watchList/noun-user_x8wxtr.svg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My Account", "#", class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>

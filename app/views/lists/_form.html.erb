@@ -13,7 +13,6 @@
     <h3>Add Some Movies:</h3>
     <%= simple_fields_for :bookmarks do |b| %>
       <div class="form-inputs">
-        <%= b.input :comment %>
         <%= b.input :movie, collection: Movie.all, input_html:{ multiple:true, data:{ controller: "tom-select"}}%>
       </div>
     <% end %>
