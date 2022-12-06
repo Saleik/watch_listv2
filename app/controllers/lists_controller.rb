@@ -7,17 +7,10 @@ class ListsController < ApplicationController
 
   def new
     @list = List.new
-    @list.bookmarks.build
   end
 
   def create
-    @list = List.new(
-      name: list_params["name"],
-      resume:list_params["resume"],
-      user: current_user,
-    )
-    @list.bookmarks.build
-    raise
+    @list = List.new(list_params)
     if @list.save
       redirect_to root_path, notice: "New List Successfully added!"
     else
@@ -28,6 +21,6 @@ class ListsController < ApplicationController
   private
 
   def list_params
-    params.require(:list).permit(:name, :resume, bookmarks_attributes: [:movie])
+    params.require(:list).permit(:user_id, :name, :resume, :image, movies_array:[])
   end
 end

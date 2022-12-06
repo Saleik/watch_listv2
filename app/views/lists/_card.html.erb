@@ -1,8 +1,8 @@
 <div class='card' style='width: 18rem;'>
-  <%= image_tag asset_url("https://image.tmdb.org/t/p/w500/#{list.movie.poster_url}"), class:'card-img-top', alt:"#{list.movie.title}"%>
+  <%= cl_image_tag list.image.key, class:'card-img-top', alt:"list image"%>
   <div class='card-body'>
     <h5 class='card-title'><%= list.name %></h5>
-    <p class='card-text'><%= list.movie.overview %></p>
+    <p class='card-text'><%= list.resume %></p>
     <%= link_to 'See More', '#', class:'btn btn-danger' %>
   </div>
 </div>
