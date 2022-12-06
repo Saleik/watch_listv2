@@ -1,9 +1,9 @@
 class List < ApplicationRecord
+  attribute :movies_array
   belongs_to :user
-  has_many :movies, through: :bookmarks
   has_many :bookmarks, dependent: :destroy
+  has_many :movies, through: :bookmarks
   has_one_attached :image
-  accepts_nested_attributes_for :bookmarks, allow_destroy: true
 
   after_commit :store_bookmarks, on: %i[create]
 
@@ -11,14 +11,13 @@ class List < ApplicationRecord
   validates :resume, presence: true, length: { maximum: 150 }
 
   def store_bookmarks
-    # movie.each do |m|
-    #   if m.size.positive?
-    #     bookmark = Bookmark.new(
-    #       list: self,
-    #       movie: m
-    #     )
-    #     bookmark.save!
-    #   end
-    # end
+    movies = Movie.get_selected_movies(movies_array)
+    movies.each do |m|
+      bookmark = Bookmark.new(
+        list: self,
+        movie: m
+      )
+      bookmark.save!
+    end
   end
 end
